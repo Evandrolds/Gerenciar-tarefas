@@ -1,6 +1,7 @@
-# Gerenciar-tarefas
-Grenciando sua tarefas de forma organizada ultilizando Java, Spring-boot e AWS
-### O que define um genrenciador de tarefas?
+# Gerenciador de tarefas
+
+### Grenciando sua tarefas de forma organizada ultilizando as melhores tecnologias do momento.
+* Mas a final o que define um genrenciador de tarefas?
 ***
 Um gerenciador de tarefas é uma ferramenta projetada para auxiliar indivíduos ou equipes na organização e acompanhamento de suas atividades diárias, projetos ou metas.
 Essas ferramentas são essenciais para aumentar a eficiência, melhorar a produtividade e garantir que todas as tarefas sejam concluídas de maneira oportuna.
