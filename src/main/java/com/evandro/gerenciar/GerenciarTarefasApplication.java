@@ -1,4 +1,4 @@
-package com.evandro.gerenciartarefas;
+package com.evandro.gerenciar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
