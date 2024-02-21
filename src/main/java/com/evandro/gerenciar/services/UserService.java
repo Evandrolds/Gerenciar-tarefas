@@ -15,11 +15,11 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
-    public void Inserir(User user){
+    public User Inserir(User user){
         if(user.getUsername()==null){
             throw new RuntimeException("O usuário precisa de um nome!");
         }
-        repository.save(user);
+      return repository.save(user);
     }
     public List<User> listar() throws FileNotFoundException {
         List<User> users = repository.findAll();
@@ -32,10 +32,16 @@ public class UserService {
         User user = repository.findById(id).orElseThrow(() ->new EntityNotFoundException("Usuário não encontrado!"));
        return user;
     }
-    public void atualizar(Long id, User user){
+    public User atualizar(Long id, User user){
         User usuario = repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado!"));
+        user.setId(usuario.getId());
         BeanUtils.copyProperties(user,usuario);
-        repository.save(usuario);
+        return repository.save(usuario);
+    }
+    public Long deleteById(Long id){
+        User usuario = repository.findById(id).orElseThrow(()-> new EntityNotFoundException("Usuário não encontrado!"));
+        repository.deleteById(id);
+        return usuario.getId();
     }
 
 }
